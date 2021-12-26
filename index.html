@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style.css">
+    <title>Progress </title>
+</head>
+<body>
+    <div class="bar-container">
+        <div class="bar"></div>
+    </div>
+    <input type="submit" value="submit" class="submit-btn" onclick="getFilledBar(2)">
+    <script>
+
+            function getFilledBar(seconds) {
+                const bar = document.querySelector(".bar");
+                let currPercent = 0;
+                const interval = setInterval(() =>{
+                    bar.style.width = `${currPercent}%`;
+                    currPercent++;
+                    if(currPercent > 100 ) {
+                        clearInterval(interval)
+                    }
+                },seconds)
+            }
+
+            //using transition property 
+           /*  function getFilledBarByTransition(seconds) {
+                const bar = document.querySelector(".bar");
+                bar.style.transition = `${seconds}s linear width`;
+                bar.style.width = '100%';
+            } */
+
+
+
+    </script>
+</body>
+</html>
