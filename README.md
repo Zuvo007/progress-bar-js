@@ -1,2 +1,2 @@
 # progress-bar-js
-This is simple interview question for frontnd interviews : To Make a progress bar 
+This is simple interview question for frontend interviews : To Make a progress bar 
